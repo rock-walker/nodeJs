@@ -1,0 +1,18 @@
+homework:
+fs, 
+updatedbyId,
+deleteById
+
+-------------------------
+Thesises from 17/02/20:
+Router,
+BodyParser,
+get, getById, Post,
+Middleware -> use next
+npm run start:dev
+
+---------------------------
+Thesises from 24/02/20:
+PostgreSQL
+ORM - sequelize
+Get, Post data directly to DB

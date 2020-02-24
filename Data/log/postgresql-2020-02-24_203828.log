@@ -1,0 +1,6 @@
+2020-02-24 20:38:28.998 +03 [26260] LOG:  database system was interrupted; last known up at 2020-02-24 10:18:21 +03
+2020-02-24 20:38:30.253 +03 [26260] LOG:  database system was not properly shut down; automatic recovery in progress
+2020-02-24 20:38:30.292 +03 [26260] LOG:  redo starts at 0/16761A0
+2020-02-24 20:38:30.294 +03 [26260] LOG:  invalid record length at 0/1676288: wanted 24, got 0
+2020-02-24 20:38:30.295 +03 [26260] LOG:  redo done at 0/1676250
+2020-02-24 20:38:30.551 +03 [28452] LOG:  database system is ready to accept connections

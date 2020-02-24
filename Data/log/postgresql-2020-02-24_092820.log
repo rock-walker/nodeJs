@@ -1,0 +1,456 @@
+2020-02-24 09:28:20.552 +03 [404] LOG:  database system was shut down at 2020-02-24 09:27:59 +03
+2020-02-24 09:28:20.610 +03 [22268] LOG:  database system is ready to accept connections
+2020-02-24 09:55:38.024 +03 [16716] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-02-24 10:14:36.219 +03 [18604] ERROR:  invalid input syntax for type integer: "AM"
+2020-02-24 10:14:36.219 +03 [18604] STATEMENT:  INSERT INTO "Posts" ("id","title","author","createdAt","updatedAt") VALUES (DEFAULT,$1,$2,$3,$4) RETURNING *;
+2020-02-24 10:15:28.557 +03 [26472] ERROR:  invalid input syntax for type integer: "AM"
+2020-02-24 10:15:28.557 +03 [26472] STATEMENT:  INSERT INTO "Posts" ("id","title","author","createdAt","updatedAt") VALUES (DEFAULT,$1,$2,$3,$4) RETURNING *;
+2020-02-24 20:10:24.687 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:25.338 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:25.340 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:26.000 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:26.002 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:26.678 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:26.679 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:27.345 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:27.347 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:28.008 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:28.010 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:28.676 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:28.677 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:29.336 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:29.339 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:30.003 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:30.005 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:30.673 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:30.674 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:31.336 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:31.338 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:32.003 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:32.005 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:32.662 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:32.665 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:33.325 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:33.327 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:33.991 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:33.993 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:34.660 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:34.661 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:35.073 +03 [11156] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2020-02-24 20:10:35.073 +03 [11156] STATEMENT:  /*pga4dash*/
+	SELECT 'session_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT count(*) FROM pg_stat_activity) AS "Total",
+	   (SELECT count(*) FROM pg_stat_activity WHERE state = 'active')  AS "Active",
+	   (SELECT count(*) FROM pg_stat_activity WHERE state = 'idle')  AS "Idle"
+	) t
+	UNION ALL
+	SELECT 'tps_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(xact_commit) + sum(xact_rollback) FROM pg_stat_database) AS "Transactions",
+	   (SELECT sum(xact_commit) FROM pg_stat_database) AS "Commits",
+	   (SELECT sum(xact_rollback) FROM pg_stat_database) AS "Rollbacks"
+	) t
+	UNION ALL
+	SELECT 'ti_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_inserted) FROM pg_stat_database) AS "Inserts",
+	   (SELECT sum(tup_updated) FROM pg_stat_database) AS "Updates",
+	   (SELECT sum(tup_deleted) FROM pg_stat_database) AS "Deletes"
+	) t
+	UNION ALL
+	SELECT 'to_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_fetched) FROM pg_stat_database) AS "Fetched",
+	   (SELECT sum(tup_returned) FROM pg_stat_database) AS "Returned"
+	) t
+	UNION ALL
+	SELECT 'bio_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(blks_read) FROM pg_stat_database) AS "Reads",
+	   (SELECT sum(blks_hit) FROM pg_stat_database) AS "Hits"
+	) t
+	
+2020-02-24 20:10:35.078 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:35.080 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:35.082 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:35.122 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:35.123 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:35.783 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:35.785 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:36.438 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:36.440 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:37.106 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:37.108 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:37.768 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:37.770 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:37.843 +03 [9172] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2020-02-24 20:10:38.429 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:38.431 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:39.097 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:39.099 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:39.769 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:39.771 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:40.430 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:40.432 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:41.093 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:41.095 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:41.764 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:41.766 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:42.419 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:42.421 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:43.086 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:43.088 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:43.743 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:43.746 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:44.405 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:44.408 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:45.089 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:45.091 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:45.497 +03 [11156] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2020-02-24 20:10:45.497 +03 [11156] STATEMENT:  /*pga4dash*/
+	SELECT 'session_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT count(*) FROM pg_stat_activity) AS "Total",
+	   (SELECT count(*) FROM pg_stat_activity WHERE state = 'active')  AS "Active",
+	   (SELECT count(*) FROM pg_stat_activity WHERE state = 'idle')  AS "Idle"
+	) t
+	UNION ALL
+	SELECT 'tps_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(xact_commit) + sum(xact_rollback) FROM pg_stat_database) AS "Transactions",
+	   (SELECT sum(xact_commit) FROM pg_stat_database) AS "Commits",
+	   (SELECT sum(xact_rollback) FROM pg_stat_database) AS "Rollbacks"
+	) t
+	UNION ALL
+	SELECT 'ti_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_inserted) FROM pg_stat_database) AS "Inserts",
+	   (SELECT sum(tup_updated) FROM pg_stat_database) AS "Updates",
+	   (SELECT sum(tup_deleted) FROM pg_stat_database) AS "Deletes"
+	) t
+	UNION ALL
+	SELECT 'to_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_fetched) FROM pg_stat_database) AS "Fetched",
+	   (SELECT sum(tup_returned) FROM pg_stat_database) AS "Returned"
+	) t
+	UNION ALL
+	SELECT 'bio_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(blks_read) FROM pg_stat_database) AS "Reads",
+	   (SELECT sum(blks_hit) FROM pg_stat_database) AS "Hits"
+	) t
+	
+2020-02-24 20:10:45.502 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:45.504 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:45.506 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:45.545 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:45.546 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:46.204 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:46.206 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:46.901 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:46.902 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:47.566 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:47.566 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:48.229 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:48.231 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:48.882 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:48.885 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:49.547 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:49.548 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:50.206 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:50.208 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:50.863 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:50.865 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:51.520 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:51.521 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:52.195 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:52.197 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:52.850 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:52.852 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:53.507 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:53.508 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:54.174 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:54.176 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:54.829 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:54.831 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:55.478 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:55.480 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:55.902 +03 [11156] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2020-02-24 20:10:55.902 +03 [11156] STATEMENT:  /*pga4dash*/
+	SELECT 'session_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT count(*) FROM pg_stat_activity) AS "Total",
+	   (SELECT count(*) FROM pg_stat_activity WHERE state = 'active')  AS "Active",
+	   (SELECT count(*) FROM pg_stat_activity WHERE state = 'idle')  AS "Idle"
+	) t
+	UNION ALL
+	SELECT 'tps_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(xact_commit) + sum(xact_rollback) FROM pg_stat_database) AS "Transactions",
+	   (SELECT sum(xact_commit) FROM pg_stat_database) AS "Commits",
+	   (SELECT sum(xact_rollback) FROM pg_stat_database) AS "Rollbacks"
+	) t
+	UNION ALL
+	SELECT 'ti_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_inserted) FROM pg_stat_database) AS "Inserts",
+	   (SELECT sum(tup_updated) FROM pg_stat_database) AS "Updates",
+	   (SELECT sum(tup_deleted) FROM pg_stat_database) AS "Deletes"
+	) t
+	UNION ALL
+	SELECT 'to_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_fetched) FROM pg_stat_database) AS "Fetched",
+	   (SELECT sum(tup_returned) FROM pg_stat_database) AS "Returned"
+	) t
+	UNION ALL
+	SELECT 'bio_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(blks_read) FROM pg_stat_database) AS "Reads",
+	   (SELECT sum(blks_hit) FROM pg_stat_database) AS "Hits"
+	) t
+	
+2020-02-24 20:10:55.907 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:55.909 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:55.911 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:55.953 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:55.953 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:56.610 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:56.612 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:57.262 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:57.264 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:57.929 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:57.931 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:58.580 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:58.582 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:59.241 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:59.243 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:59.909 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:10:59.912 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:00.567 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:00.569 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:01.219 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:01.222 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:01.887 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:01.889 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:02.432 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:02.434 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:02.543 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:02.545 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:03.091 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:03.093 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:03.199 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:03.201 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:03.763 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:03.765 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:03.869 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:03.871 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:04.421 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:04.423 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:04.528 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:04.528 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:05.089 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:05.091 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:05.196 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:05.198 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:05.747 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:05.747 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:05.854 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:05.856 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:06.266 +03 [11156] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2020-02-24 20:11:06.266 +03 [11156] STATEMENT:  /*pga4dash*/
+	SELECT 'session_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT count(*) FROM pg_stat_activity) AS "Total",
+	   (SELECT count(*) FROM pg_stat_activity WHERE state = 'active')  AS "Active",
+	   (SELECT count(*) FROM pg_stat_activity WHERE state = 'idle')  AS "Idle"
+	) t
+	UNION ALL
+	SELECT 'tps_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(xact_commit) + sum(xact_rollback) FROM pg_stat_database) AS "Transactions",
+	   (SELECT sum(xact_commit) FROM pg_stat_database) AS "Commits",
+	   (SELECT sum(xact_rollback) FROM pg_stat_database) AS "Rollbacks"
+	) t
+	UNION ALL
+	SELECT 'ti_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_inserted) FROM pg_stat_database) AS "Inserts",
+	   (SELECT sum(tup_updated) FROM pg_stat_database) AS "Updates",
+	   (SELECT sum(tup_deleted) FROM pg_stat_database) AS "Deletes"
+	) t
+	UNION ALL
+	SELECT 'to_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_fetched) FROM pg_stat_database) AS "Fetched",
+	   (SELECT sum(tup_returned) FROM pg_stat_database) AS "Returned"
+	) t
+	UNION ALL
+	SELECT 'bio_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(blks_read) FROM pg_stat_database) AS "Reads",
+	   (SELECT sum(blks_hit) FROM pg_stat_database) AS "Hits"
+	) t
+	
+2020-02-24 20:11:06.271 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:06.273 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:06.275 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:06.326 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:06.327 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:06.404 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:06.406 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:06.994 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:06.996 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:07.072 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:07.074 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:07.663 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:07.663 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:07.743 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:07.743 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:08.366 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:08.367 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:08.444 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:08.445 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:09.043 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:09.044 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:09.119 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:09.120 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:09.733 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:09.734 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:09.808 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:09.808 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:10.406 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:10.407 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:10.481 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:10.482 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:11.082 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:11.083 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:11.158 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:11.159 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:11.771 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:11.774 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:11.844 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:11.845 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:12.442 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:12.443 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:12.516 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:12.517 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:12.961 +03 [25324] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2020-02-24 20:11:12.964 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:12.966 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:13.123 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:13.124 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:13.624 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:13.626 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:13.785 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:13.787 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:14.282 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:14.284 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:14.443 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:14.445 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:14.955 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:14.957 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:15.116 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:15.118 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:15.607 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:15.609 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:15.772 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:15.774 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:16.264 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:16.266 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:16.424 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:16.426 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:16.848 +03 [11156] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2020-02-24 20:11:16.848 +03 [11156] STATEMENT:  /*pga4dash*/
+	SELECT 'session_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT count(*) FROM pg_stat_activity) AS "Total",
+	   (SELECT count(*) FROM pg_stat_activity WHERE state = 'active')  AS "Active",
+	   (SELECT count(*) FROM pg_stat_activity WHERE state = 'idle')  AS "Idle"
+	) t
+	UNION ALL
+	SELECT 'tps_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(xact_commit) + sum(xact_rollback) FROM pg_stat_database) AS "Transactions",
+	   (SELECT sum(xact_commit) FROM pg_stat_database) AS "Commits",
+	   (SELECT sum(xact_rollback) FROM pg_stat_database) AS "Rollbacks"
+	) t
+	UNION ALL
+	SELECT 'ti_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_inserted) FROM pg_stat_database) AS "Inserts",
+	   (SELECT sum(tup_updated) FROM pg_stat_database) AS "Updates",
+	   (SELECT sum(tup_deleted) FROM pg_stat_database) AS "Deletes"
+	) t
+	UNION ALL
+	SELECT 'to_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(tup_fetched) FROM pg_stat_database) AS "Fetched",
+	   (SELECT sum(tup_returned) FROM pg_stat_database) AS "Returned"
+	) t
+	UNION ALL
+	SELECT 'bio_stats' AS chart_name, row_to_json(t) AS chart_data
+	FROM (SELECT
+	   (SELECT sum(blks_read) FROM pg_stat_database) AS "Reads",
+	   (SELECT sum(blks_hit) FROM pg_stat_database) AS "Hits"
+	) t
+	
+2020-02-24 20:11:16.853 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:16.855 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:16.857 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:16.902 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:16.903 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:16.938 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:16.939 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:17.556 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:17.558 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:17.597 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:17.599 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:18.225 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:18.227 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:18.271 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:18.273 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:18.904 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:18.906 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:18.949 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:18.950 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:19.569 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:19.570 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:19.615 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:19.616 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:20.237 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:20.239 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:20.283 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:20.285 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:20.902 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:20.904 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:20.950 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:20.950 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:21.573 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:21.574 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:21.624 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:21.625 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:22.243 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:22.245 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:22.290 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:22.291 +03 [22692] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2020-02-24 20:11:22.760 +03 [22268] LOG:  could not open file "postmaster.pid": No such file or directory
+2020-02-24 20:11:22.761 +03 [22268] LOG:  performing immediate shutdown because data directory lock file is invalid
+2020-02-24 20:11:22.762 +03 [22268] LOG:  received immediate shutdown request
+2020-02-24 20:11:22.763 +03 [22268] LOG:  could not open file "postmaster.pid": No such file or directory
+2020-02-24 20:11:22.881 +03 [11156] WARNING:  terminating connection because of crash of another server process
+2020-02-24 20:11:22.881 +03 [11156] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2020-02-24 20:11:22.881 +03 [11156] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2020-02-24 20:11:22.889 +03 [22692] LOG:  could not open temporary statistics file "pg_stat/global.tmp": No such file or directory
+2020-02-24 20:11:22.889 +03 [25324] WARNING:  terminating connection because of crash of another server process
+2020-02-24 20:11:22.889 +03 [25324] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2020-02-24 20:11:22.889 +03 [25324] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2020-02-24 17:11:22.892 GMT [19540] FATAL:  "D:/Study/NodeJs/myapp/Data" is not a valid data directory
+2020-02-24 17:11:22.892 GMT [19540] DETAIL:  File "D:/Study/NodeJs/myapp/Data/PG_VERSION" is missing.
+2020-02-24 17:11:22.930 GMT [22424] FATAL:  "D:/Study/NodeJs/myapp/Data" is not a valid data directory
+2020-02-24 17:11:22.930 GMT [22424] DETAIL:  File "D:/Study/NodeJs/myapp/Data/PG_VERSION" is missing.
+2020-02-24 20:11:22.942 +03 [22268] LOG:  database system is shut down
