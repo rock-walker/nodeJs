@@ -1,4 +1,6 @@
 /node_modules
+/Data/pg*
+/Data/log
 /Data/base
 /Data/global
 *.stat

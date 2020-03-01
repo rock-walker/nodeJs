@@ -22,21 +22,6 @@ class PostService {
 	}
 
 	async getById(id) {
-		/*
-		if (typeof id === 'undefined') {
-			throw ({
-				status: 400, 
-				message: 'No id provided' 
-			})
-		}
-
-		const post = db.posts.find(post => post.id === id);
-		if (!post) {
-			throw ({status: 404});
-		}
-
-		return post;
-		*/
 		return await db.Post.findOne({
 			where: {
 				id
