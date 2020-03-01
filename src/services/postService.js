@@ -29,27 +29,19 @@ class PostService {
 		})
 	}
 
-	update(data) {
-		let post = this.getById(data.id);
+	async update(data, id) {
+		let post = await this.getById(id);
 		post = { ...data}
-		db.posts = db.posts.map(p => 
-			p.id === post.id
-			? post
-			: p
-		);
-
-		const rawPosts = JSON.stringify(db.posts, null, 2);
-		fs.writeFileSync('database.txt', rawPosts);
-
+		await db.Post.update(post, 
+			{where: {id}});
 		return post;
 	}
 
-	delete(id) {
-		const post = this.getById(id);
-		db.posts.splice(post.id - 1, 1);
-
-		const rawPosts = JSON.stringify(db.posts, null, 2);
-		fs.writeFileSync('database.txt', rawPosts);
+	async delete(id) {
+		const post = await this.getById(id);
+		if (post) {
+			await db.Post.destroy({where: {id}});
+		}
 
 		return;
 	}

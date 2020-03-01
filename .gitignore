@@ -1,4 +1,5 @@
 /node_modules
+/Data/pg_stat_tmp
 /Data/pg*
 /Data/log
 /Data/base

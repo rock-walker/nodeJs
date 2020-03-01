@@ -42,10 +42,10 @@ router.post('/', async (req, res) => {
 	res.send(data)
 })
 
-router.put('/', (req, res) => {
+router.put('/:id', async (req, res) => {
 	let data;
 	try {
-		data = postService.update(req.body);
+		data = await postService.update(req.body, Number(req.params.id));
 	} catch (err) {
 		res.status(500).send({
 			message: err.message
@@ -55,10 +55,10 @@ router.put('/', (req, res) => {
 	res.send(data)
 })
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', async (req, res) => {
 	let data;
 	try {
-		data = postService.delete(Number(req.params.id));
+		data = await postService.delete(Number(req.params.id));
 	} catch (err) {
 		res.status(500).send({
 			message: err.message
