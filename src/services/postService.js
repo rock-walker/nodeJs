@@ -2,15 +2,10 @@ const db = require('../models');
 const fs = require('fs');
 
 class PostService {
-/*
 	constructor() {
-		let rawData = fs.readFileSync('database.txt');
-		console.log('posts: ' + rawData + '---');
-		if (rawData.length > 1) {
-			db.posts = JSON.parse(rawData);
-		};
+		
 	}
-*/
+	
 	async getAll() {
 		const posts = await db.Post.findAll()
 		return posts 
